@@ -40,8 +40,24 @@ DSH 的语音输入是一个服务 + 若干「识别器（provider）」。本�
 
 ## 安装
 
+**方式一：预构建包（推荐，免构建、不需要 git）**
+
 ```bash
-dsh plugin --profile <你的 profile> add dsh-speech-polish
+dsh plugin --profile <你的 profile> add https://github.com/KeinsteinNUS/dsh-speech-polish/releases/download/v0.1.0/dsh-speech-polish-0.1.0.tgz
+```
+
+**方式二：从仓库装（走 https，需要本机能直连 GitHub）**
+
+```bash
+dsh plugin --profile <你的 profile> add git+https://github.com/KeinsteinNUS/dsh-speech-polish.git
+```
+
+> 别用 `github:KeinsteinNUS/dsh-speech-polish` 这种简写——npm / pnpm 会把它解析成 **SSH**（`git@github.com:...`），没配 SSH key 的机器直接报 `Permission denied (publickey)`。
+
+**方式三：npm**（发布到 npm 后可用）
+
+```bash
+dsh plugin add dsh-speech-polish
 ```
 
 然后在 **插件管理页 → 语音输入 Bundle 的详情**里，把「识别器」选成 **SenseVoice + glossary fix**，语言选中文。

@@ -47,8 +47,26 @@ picker.
 
 ## Install
 
+**Option 1 — prebuilt tarball (recommended: no build step, no git)**
+
 ```bash
-dsh plugin --profile <your-profile> add dsh-speech-polish
+dsh plugin --profile <your-profile> add https://github.com/KeinsteinNUS/dsh-speech-polish/releases/download/v0.1.0/dsh-speech-polish-0.1.0.tgz
+```
+
+**Option 2 — from the repository over https**
+
+```bash
+dsh plugin --profile <your-profile> add git+https://github.com/KeinsteinNUS/dsh-speech-polish.git
+```
+
+> Avoid the `github:owner/repo` shorthand: npm and pnpm resolve it to **SSH**
+> (`git@github.com:...`), which fails with `Permission denied (publickey)` on
+> machines without an SSH key.
+
+**Option 3 — npm (once published)**
+
+```bash
+dsh plugin add dsh-speech-polish
 ```
 
 Then open the plugin manager → the voice-input bundle details and select
