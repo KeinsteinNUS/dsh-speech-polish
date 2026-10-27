@@ -1,19 +1,18 @@
 # Entry for the awesome-dsh-plugin catalogue.
 #
-# How to submit (see https://github.com/awesome-dsh-plugin/awesome-dsh-plugin):
-#   fork the repo, add this file as
-#     data/plugins/KeinsteinNUS__dsh-speech-polish.yml
-#   then open a pull request. The README and the website regenerate from these
-#   YAML files automatically; no other files need to change.
+# Copy this file to data/plugins/KeinsteinNUS__dsh-speech-polish.yml in a fork of
+# https://github.com/awesome-dsh-plugin/awesome-dsh-plugin and open one PR.
+# The README and the website are generated from data/plugins/*.yml, so the entry
+# file is the whole submission.
 #
-# Field shape mirrored from existing entries (e.g. 0nt-one__dsh-voice-input.yml):
-#   url, name, category, description.en, description.zh
-#
-# Replace keinstein and the URL before submitting.
+# CI checks, in order: entry count (max 3 per PR), `dsh.bundle` in package.json,
+# repo age >= 1 day, awesome-lint + site build. The `dsh-plugin` topic is already
+# set on the repository.
 
 url: https://github.com/KeinsteinNUS/dsh-speech-polish
 name: KeinsteinNUS/dsh-speech-polish
 category: voice
 description:
-  en: 'Terminology-aware correction layer for the built-in local speech-to-text: keeps DSH''s own microphone and SenseVoice engine (audio never leaves the machine), sends only the finished transcript through one low-temperature LLM pass with your glossary, and fixes homophones, domain terms and malformed numbers.'
-  zh: 给内置本地语音转写加一层术语纠错：沿用 DSH 自己的麦克风与 SenseVoice 引擎（音频不出本机），只把转写好的文字过一次低温 LLM（带你的术语表），修同音字、专业名词与数字写法错误。
+  en: 'Adds a terminology-aware correction pass to the built-in local speech-to-text: keeps DSH''s own microphone and SenseVoice engine (audio never leaves the machine) and fixes homophones, domain terms and malformed numbers in the finished transcript.'
+  zh: '给内置本地语音转写加一层术语纠错：沿用自带的麦克风与 SenseVoice 引擎（音频不出本机），在文字进入输入框前修正同音字、专业名词与数字写法。'
+icon: https://raw.githubusercontent.com/KeinsteinNUS/dsh-speech-polish/main/assets/icon-180.png
