@@ -1,0 +1,14 @@
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local debugging artifacts
+*.log
+speech-polish-trace.jsonl
+*.tgz
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

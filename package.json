@@ -1,0 +1,58 @@
+{
+  "name": "dsh-speech-polish",
+  "version": "0.1.0",
+  "description": "Terminology-aware correction layer for DeepSeek Harness's built-in local speech-to-text: fixes homophone and near-homophone mistakes before the transcript reaches the composer.",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "speech-to-text",
+    "speech",
+    "asr",
+    "stt",
+    "voice",
+    "dictation",
+    "transcript",
+    "correction",
+    "sensevoice"
+  ],
+  "license": "MIT",
+  "author": "KeinsteinNUS <jxwei91@gmail.com>",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-0 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeinsteinNUS/dsh-speech-polish.git"
+  },
+  "homepage": "https://github.com/KeinsteinNUS/dsh-speech-polish#readme",
+  "bugs": {
+    "url": "https://github.com/KeinsteinNUS/dsh-speech-polish/issues"
+  }
+}

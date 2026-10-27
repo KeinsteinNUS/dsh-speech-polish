@@ -1,0 +1,25 @@
+# dsh-speech-polish bundle patch
+#
+# Mounts one speech-to-text provider that wraps an existing recognizer (by
+# default the bundled local `sensevoice-local`) with a terminology-aware LLM
+# correction pass. Nothing else in the UI changes: the composer microphone keeps
+# working, and the recognizer simply gains one more entry in the picker.
+#
+# To select it, point the speech service at the new provider id — either from
+# the voice-input bundle details page, or by adding this to your profile's
+# cordis.patch.yml:
+#
+#   - id: speech-to-text
+#     config:
+#       defaultProvider: sensevoice-polish
+#       language: zh
+#
+- insert:
+    - id: speech-polish
+      name: 'dsh-speech-polish'
+      config:
+        baseProviderId: sensevoice-local
+        providerId: sensevoice-polish
+        label: 'SenseVoice + glossary fix'
+        model: deepseek-chat
+        timeoutMs: 8000
